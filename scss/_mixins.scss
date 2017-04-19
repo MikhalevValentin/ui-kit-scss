@@ -1,0 +1,176 @@
+@import "_colors.scss";
+@import "_variables.scss";
+
+//border-radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+//box_shadow
+@mixin box_shadow ($level) {
+
+    @if $level == 1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    } @else if $level == 2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    } @else if $level == 3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    } @else if $level == 4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    } @else if $level == 5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+
+}
+//transform
+@mixin transformTranslateY($values) {
+    -ms-transform: translateY($values);
+    transform: translateY($values);
+}
+//transition
+@mixin transition($prop, $values...) {
+  -moz-#{$prop}: $values;
+  -ms-#{$prop}: $values;
+  -o-#{$prop}: $values;
+  -webkit-#{$prop}: $values;
+  $prop: $values;
+}
+
+@mixin user-card-box-shadow () {
+    box-shadow: 0px 6px 13px 0px rgba(1, 2, 2, 0.15);
+}
+
+@mixin gradientSvg () {
+    background: rgb(201, 100, 102);
+    background: -moz-linear-gradient(30deg, rgb(201, 100, 102) 30%, rgb(95, 26, 43) 70%);
+    background: -webkit-linear-gradient(30deg, rgb(201, 100, 102) 30%, rgb(95, 26, 43) 70%);
+    background: -o-linear-gradient(30deg, rgb(201, 100, 102) 30%, rgb(95, 26, 43) 70%);
+    background: -ms-linear-gradient(30deg, rgb(201, 100, 102) 30%, rgb(95, 26, 43) 70%);
+    background: linear-gradient(120deg, rgb(201, 100, 102) 30%, rgb(95, 26, 43) 70%);
+}
+
+@mixin button {
+    outline: 0;
+    cursor: pointer;
+    @include border-radius(4px);
+    &:hover, &:focus {
+        @include transition(all, 250ms);
+    }
+}
+
+@mixin defaultButton {
+    @include button;
+    display: block;
+    background-color: $defaultButtonColor;
+    border: $defaultButtonBorderStyle;
+    color: $defaultButtonFontColor;
+}
+
+@mixin UserCardButton {
+    @include button;
+    display: block;
+    background-color: $userCardButtonColor;
+    border: $userCardButtonBorderStyle;
+    color: $userCardButtonFontColor;
+    width: 125px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+@mixin actionButton {
+    @include button;
+    @include user-card-box-shadow;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 12px;
+    width: auto;
+    min-width: 170px;
+    height: auto;
+    margin: 15px auto;
+    padding: 12px 12px 12px 80px;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+}
+
+@mixin downloadButton {
+    @include actionButton;
+    background-color: $downloadButtonColor;
+    border: $downloadButtonBorderStyle;
+    color: $downloadButtonFontColor;
+    &:before {
+        background: url(/img/download-icon.png) no-repeat;
+        width: 65px;
+        height: 28px;
+        left: 12px;
+        top: 5px;
+    }
+}
+
+@mixin optionsButton {
+    @include actionButton;
+    background-color: $optionsButtonColor;
+    border: $optionsButtonBorderStyle;
+    color: $optionsButtonFontColor;
+    &:before {
+        background: url(/img/options-icon.png) no-repeat;
+        background-size: 75%;
+        width: 75px;
+        height: 28px;
+        top: 3px;
+        left: 15px;
+    }
+}
+
+@mixin recycleButton {
+    @include actionButton;
+    background-color: $recycleButtonColor;
+    border: $recycleButtonBorderStyle;
+    color: $recycleButtonFontColor;
+    &:before {
+        background: url(/img/delete-icon.png) no-repeat;
+        width: 45px;
+        height: 30px;
+        left: 20px;
+        top: 3px;
+        background-size: 95%;
+    }
+}
+
+@mixin soundButton {
+    @include actionButton;
+    background-color: $soundButtonColor;
+    border: $soundButtonBorderStyle;
+    color: $soundButtonFontColor;
+    &:before {
+        background: url(/img/sound-icon.png) no-repeat;
+        width: 45px;
+        height: 30px;
+        left: 19px;
+        top: 3px;
+        background-size: 95%;
+    }
+}
+
+@mixin batteryButton {
+    @include actionButton;
+    background-color: $batteryButtonColor;
+    border: $batteryButtonBorderStyle;
+    color: $batteryButtonFontColor;
+    &:before {
+        background: url(/img/battery-icon.png) no-repeat;
+        width: 45px;
+        height: 30px;
+        left: 19px;
+        top: 2px;
+        background-size: 95%;
+    }
+}
+
+

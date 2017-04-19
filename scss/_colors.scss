@@ -1,0 +1,47 @@
+$whiteColor: #e5e6d6;
+$yellowLightColor: #cbccb7;
+$yellowColor: #e4d49e;
+$beigeColor: #e5e6d6;
+$redColor: #c96466;
+$greenColor: #6f8b78;
+$darkRedColor: #5f1a2b;
+
+$backgroundColor: $yellowLightColor;
+
+$userCardFontColor: $darkRedColor;
+//defaultButton
+$defaultButtonColor: $yellowLightColor;
+$defaultButtonBroderColor: $yellowLightColor;
+$defaultButtonFontColor: $greenColor;
+$defaultButtonBorderStyle: 1px solid $defaultButtonBroderColor;
+//userCardButton
+$userCardButtonColor: $greenColor;
+$userCardButtonBroderColor: $greenColor;
+$userCardButtonFontColor: $beigeColor;
+$userCardButtonBorderStyle: 1px solid $userCardButtonBroderColor;
+//downloadButton
+$downloadButtonColor: $whiteColor;
+$downloadButtonBorderColor: $whiteColor;
+$downloadButtonFontColor: $redColor;
+$downloadButtonBorderStyle: 1px solid $downloadButtonBorderColor;
+//optionsButton
+$optionsButtonColor: $redColor;
+$optionsButtonBorderColor: $redColor;
+$optionsButtonFontColor: $whiteColor;
+$optionsButtonBorderStyle: 1px solid $downloadButtonFontColor;
+//recycleButton
+$recycleButtonColor: $darkRedColor;
+$recycleButtonBorderColor: $darkRedColor;
+$recycleButtonFontColor: $yellowColor;
+$recycleButtonBorderStyle: 1px solid $recycleButtonBorderColor;
+//soundButton
+$soundButtonColor: $yellowColor;
+$soundButtonBorderColor: $yellowColor;
+$soundButtonFontColor: $darkRedColor;
+$soundButtonBorderStyle: 1px solid $soundButtonBorderColor;
+//batteryButton
+$batteryButtonColor: $greenColor;
+$batteryButtonBorderColor: $greenColor;
+$batteryButtonFontColor: $whiteColor;
+$batteryButtonBorderStyle: 1px solid $batteryButtonBorderColor;
+

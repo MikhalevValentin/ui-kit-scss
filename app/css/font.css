@@ -1,0 +1,49 @@
+	@font-face {
+			font-family: "ACLineRegular";
+			src: url("../fonts/ACLineRegular/ACLineRegular.eot");
+			src: url("../fonts/ACLineRegular/ACLineRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/ACLineRegular/ACLineRegular.woff") format("woff"),
+			url("../fonts/ACLineRegular/ACLineRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "CuprumRegular";
+			src: url("../fonts/CuprumRegular/CuprumRegular.eot");
+			src: url("../fonts/CuprumRegular/CuprumRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/CuprumRegular/CuprumRegular.woff") format("woff"),
+			url("../fonts/CuprumRegular/CuprumRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "CuprumBold";
+			src: url("../fonts/CuprumBold/CuprumBold.eot");
+			src: url("../fonts/CuprumBold/CuprumBold.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/CuprumBold/CuprumBold.woff") format("woff"),
+			url("../fonts/CuprumBold/CuprumBold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "CuprumItalic";
+			src: url("../fonts/CuprumItalic/CuprumItalic.eot");
+			src: url("../fonts/CuprumItalic/CuprumItalic.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/CuprumItalic/CuprumItalic.woff") format("woff"),
+			url("../fonts/CuprumItalic/CuprumItalic.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "CuprumBoldItalic";
+			src: url("../fonts/CuprumBoldItalic/CuprumBoldItalic.eot");
+			src: url("../fonts/CuprumBoldItalic/CuprumBoldItalic.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/CuprumBoldItalic/CuprumBoldItalic.woff") format("woff"),
+			url("../fonts/CuprumBoldItalic/CuprumBoldItalic.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
