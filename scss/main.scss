@@ -48,7 +48,6 @@ h4 {
 
 .user__card {
     max-width: 180px;
-    margin: 50px 45px;
     padding: 15px 15px 35px;
     background-color: $beigeColor;
     @include user-card-box-shadow;
@@ -99,24 +98,196 @@ h4 {
     &--info {
         font-size: 16px;
         padding: 0 20px 16px;
+        color: $darkRedColor;
     }
     &--double-btn {
+        font-size: 0;  //hack for inline-block outline
         .button__alert {
-            .btn {
+            width: 50%;
+            &.btn {
+                &--yes,
+                &--no {
+                    padding: 10px 0 10px 26px;
+                    text-transform: uppercase;
+                    position: relative;
+                    font-size: 18px;
+                }
                 &--yes {
-                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 7px;
+                        left: 34px;
+                        width: 38px;
+                        height: 26px;
+                        background: url(/img/btn-alert-yes.png) no-repeat;
+                    }
                 }
                 &--no {
-                    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        left: 42px;
+                        width: 38px;
+                        height: 26px;
+                        background: url(/img/btn-alert-no.png) no-repeat;
+                    }
                 }
             }
         }
     }
 }
 
+.flex-wrap {
+    @include flexParent;
+    margin: 10px;
+}
+.ui-wrap {
+    @include flexChild;
+    padding: 0 10px;
+}
 
-.ui-wrap {            
-    width: 300px;
-    display: inline-block;
+.theme {
+    &__card {
+        max-width: 300px;
+        background-color: $beigeColor;
+        @include user-card-box-shadow;
+        @include border-radius(4px);
+        &--img-block {
+            @include border-radius(6px 6px 0 0);
+            height: 160px;
+            width: 300px;
+            .img-block {
+                @include border-radius(6px 6px 0 0);
+                background-image: url(/img/theme-card.png);
+                background-size: 100%;
+                background-position: center center;
+                height: 160px;
+                width: 300px;
+                display: block;
+            }
+        }
+        &--slide-btn {
+            background-color: $slideBtnBgColor;
+            color: $slideBtnTextColor;
+            min-height: 60px;
+            font-size: 0;
+            .slide-btn {
+                &--info,
+                &.slide--left,
+                &.slide--right {
+                    font-size: 18px;
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 33.3%;
+                    position: relative;
+                }
+                &--info {
+                    padding: 20px 0;
+                    text-align: center;
+                }
+                &--link {
+                    width: 30px;
+                    height: 42px;
+                    display: block;
+                    position: absolute;
+                    top: 8px;
+                    background: url(/img/slide-sprite.png) no-repeat;
+                }
+                &.slide {
+                    &--right {
+                       .slide-btn--link {
+                            right: 4px;
+                            background-position: -30px 0;
+                        } 
+                    }
+                    &--left {
+                       .slide-btn--link {
+                            left: 4px;
+                        } 
+                    }
+                }
+            }
+        }
+        &--info {
+            padding: 16px 20px 20px;
+            &-text {
+                margin: 0 0 20px;
+                font-size: 15px;
+                color: $darkRedColor;
+            }
+        }
+        &--info-more {
+            color: $redColor;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    &__menu {
+        max-width: 320px;
+        background-color: $beigeColor;
+        @include user-card-box-shadow;
+        @include border-radius(6px);
+        
+        &--img-block {
+            @include border-radius(6px 6px 0 0);
+            height: 250px;
+            width: 260px;
+            .img-block {
+                @include border-radius(6px 6px 0 0);
+                background: url(/img/card-img.png) no-repeat;
+                background-position: 0 -150px;
+                height: 250px;
+                width: 260px;
+                display: block;
+            }
+        }
+        &--menu {
+            &-block {
+                @include flexParent;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            
+            &-item {
+                @include flexChild;
+                .menu-link {
+                    &.link {
+                        &-list,
+                        &-save,
+                        &-time,
+                        &-frame {
+                            display: block;
+                            height: 65px;
+                            width: 65px;
+                            background: url(/img/menu-list.png) no-repeat;
+                            &:hover {
+                                background-color: $redColor;
+                            }
+                        }
+                        &-list {
+                            background-position: 8px -10px;
+                            @include border-radius(0 0 0 6px);
+                        }
+                        &-save {
+                            background-position: -69px -10px;
+                            background-color: $redColor;
+                        }
+                        &-time {
+                            background-position: -152px -10px;
+                        }
+                        &-frame {
+                            background-position: -231px -8px;
+                            @include border-radius(0 0 6px 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 

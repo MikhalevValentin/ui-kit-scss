@@ -25,5 +25,16 @@ button {
         &--battery {
             @include batteryButton;
         }
+        &__alert {
+            @include buttonAlert;
+            &.btn {
+                &--yes {
+                    @include buttonAlertYes;
+                }
+                &--no {
+                    @include buttonAlertNo;
+                }
+            }
+        }
     }
 }

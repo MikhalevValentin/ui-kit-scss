@@ -7,6 +7,8 @@ $greenColor: #6f8b78;
 $darkRedColor: #5f1a2b;
 
 $backgroundColor: $yellowLightColor;
+$slideBtnBgColor: $redColor;
+$slideBtnTextColor: $beigeColor;
 
 $userCardFontColor: $darkRedColor;
 //defaultButton
@@ -44,4 +46,14 @@ $batteryButtonColor: $greenColor;
 $batteryButtonBorderColor: $greenColor;
 $batteryButtonFontColor: $whiteColor;
 $batteryButtonBorderStyle: 1px solid $batteryButtonBorderColor;
+//buttonAlertYes
+$ButtonAlertYesColor: $yellowColor;
+$ButtonAlertYesBorderColor: $yellowColor;
+$ButtonAlertYesFontColor: $greenColor;
+$ButtonAlertYesBorderStyle: 1px solid $ButtonAlertYesBorderColor;
+//buttonAlertNo
+$ButtonAlertNoColor: $greenColor;
+$ButtonAlertNoBorderColor: $greenColor;
+$ButtonAlertNoFontColor: $yellowColor;
+$ButtonAlertNoBorderStyle: 1px solid $ButtonAlertNoBorderColor;
 
